@@ -156,7 +156,7 @@ If you find it useful, the ``data/cache`` folder created on my side is also shar
   ```
   **Note**: Only support IMS_PER_BATCH=1 for training now, see details in the cfg files under the foder ``experiments/cfgs/``.
  
-By default, trained networks are saved under:
+By default, trained models are saved under:
 
 ```
 output/[NET]/[DATASET]/default/
