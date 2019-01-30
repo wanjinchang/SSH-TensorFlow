@@ -1,5 +1,5 @@
 # --------------------------------------------------------
-# Faster R-CNN
+# SSH
 # Licensed under The MIT License [see LICENSE for details]
 # Written by Ross Girshick and Xinlei Chen
 # --------------------------------------------------------
