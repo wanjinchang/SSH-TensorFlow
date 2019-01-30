@@ -2,7 +2,7 @@
 
 ### Introduction
 
-This is a implementation of [SSH: Single Stage Headless Face Detector](https://arxiv.org/pdf/1708.03979.pdf) reproduced using TensorFlow. 
+This is an implementation of [SSH: Single Stage Headless Face Detector](https://arxiv.org/pdf/1708.03979.pdf) reproduced using TensorFlow. 
 
 This code is modified from [tf-faster-rcnn](https://github.com/endernewton/tf-faster-rcnn).	
 
