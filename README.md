@@ -191,6 +191,7 @@ Evaluation the trained models on wider face val dataset
 ## Demo
 
 -  For ckpt demo
+
 Download trained models from [Models](#models), then uzip to the folder ``output/``, modify your path of trained model
   ```Shell
   # at repository root
@@ -200,6 +201,7 @@ Download trained models from [Models](#models), then uzip to the folder ``output
 or run ``python tools/demo.py`` directly.
 
 -  For frozen graph inference
+
 Download the pb models(contained in [Models](#models)) or frozen your model by yourself using script ``tools/convert_ckpt_to_pb.py``, modify your path of trained model, then run ``python tools/inference.py``.
 
 
