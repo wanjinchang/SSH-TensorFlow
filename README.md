@@ -38,29 +38,19 @@ SSH eval result without using an image pyramid between different backbones:
 ### Result
 
 demo_result(MobileNetV1_SSH result):
-
 <div align=center><img src="https://github.com/wanjinchang/SSH-TensorFlow/blob/master/data/mobilenet_result/demo.jpg"/></div>
-
 <div align=center><img src="https://github.com/wanjinchang/SSH-TensorFlow/blob/master/data/mobilenet_result/14.jpeg"/></div>
-
 <div align=center><img src="https://github.com/wanjinchang/SSH-TensorFlow/blob/master/data/mobilenet_result/4.jpeg"/></div>
-
 <div align=center><img src="https://github.com/wanjinchang/SSH-TensorFlow/blob/master/data/mobilenet_result/37.jpeg"/></div>
 
 **Result on FDDB**
 
 VGG16-SSH:
-
 <div align=center><img src="https://github.com/wanjinchang/SSH-TensorFlow/blob/master/data/FDDB_result/VGG16_SSH_DiscROC.png"/></div>
-
 Res50-SSH:
-
 <div align=center><img src="https://github.com/wanjinchang/SSH-TensorFlow/blob/master/data/FDDB_result/ResNet50_SHH_DiscROC.png"/></div>
-
 MobileNetV1-SSH:
-
 <div align=center><img src="https://github.com/wanjinchang/SSH-TensorFlow/blob/master/data/FDDB_result/MobileNetv1_SSH_DiscROC.png"/></div>
-
 
 ### Contents
 
