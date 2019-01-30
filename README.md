@@ -37,11 +37,12 @@ SSH eval result without using an image pyramid between different backbones:
 
 ### Result
 
-demo_result(MobileNetV1_SSH result):
-<div align=center><img src="https://github.com/wanjinchang/SSH-TensorFlow/blob/master/data/mobilenet_result/demo.jpg"/></div>
-<div align=center><img src="https://github.com/wanjinchang/SSH-TensorFlow/blob/master/data/mobilenet_result/14.jpeg"/></div>
-<div align=center><img src="https://github.com/wanjinchang/SSH-TensorFlow/blob/master/data/mobilenet_result/4.jpeg"/></div>
-<div align=center><img src="https://github.com/wanjinchang/SSH-TensorFlow/blob/master/data/mobilenet_result/37.jpeg"/></div>
+demo_result(VGG16_SSH result):
+<div align=center><img src="https://github.com/wanjinchang/SSH-TensorFlow/blob/master/data/vgg16_result/demo.jpg"/></div>
+<div align=center><img src="https://github.com/wanjinchang/SSH-TensorFlow/blob/master/data/vgg16_result/14.jpeg"/></div>
+<div align=center><img src="https://github.com/wanjinchang/SSH-TensorFlow/blob/master/data/vgg16_result/40.jpeg"/></div>
+<div align=center><img src="https://github.com/wanjinchang/SSH-TensorFlow/blob/master/data/vgg16_result/4.jpeg"/></div>
+<div align=center><img src="https://github.com/wanjinchang/SSH-TensorFlow/blob/master/data/vgg16_result/37.jpeg"/></div>
 
 **Result on FDDB**
 
