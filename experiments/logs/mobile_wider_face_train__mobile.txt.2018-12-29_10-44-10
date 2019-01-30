@@ -1,0 +1,26 @@
++ echo Logging output to experiments/logs/mobile_wider_face_train__mobile.txt.2018-12-29_10-44-10
+Logging output to experiments/logs/mobile_wider_face_train__mobile.txt.2018-12-29_10-44-10
++ set +x
++ '[' '!' -f output/mobile/wider_face_train/default/mobile_ssh_iter_300000.ckpt.index ']'
++ [[ ! -z '' ]]
++ CUDA_VISIBLE_DEVICES=0
++ time python ./tools/trainval_net.py --weight data/imagenet_weights/mobile.ckpt --imdb wider_face_train --imdbval wider_face_val --iters 300000 --cfg experiments/cfgs/mobile.yml --net mobile --set TRAIN.STEPSIZE '[120000]'
+/home/oeasy/anaconda3/lib/python3.6/importlib/_bootstrap.py:219: RuntimeWarning: compiletime version 3.5 of module 'tensorflow.python.framework.fast_tensor_util' does not match runtime version 3.6
+  return f(*args, **kwds)
+/home/oeasy/anaconda3/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Traceback (most recent call last):
+  File "./tools/trainval_net.py", line 27, in <module>
+    from nets.vgg16 import vgg16_ssh
+  File "/home/oeasy/SSH-TensorFlow/tools/../lib/nets/vgg16.py", line 16, in <module>
+    from nets.network import Network
+  File "/home/oeasy/SSH-TensorFlow/tools/../lib/nets/network.py", line 24, in <module>
+    from layer_utils.proposal_layer import proposal_layer, proposal_layer_tf
+  File "/home/oeasy/SSH-TensorFlow/tools/../lib/layer_utils/proposal_layer.py", line 14, in <module>
+    from model.nms_wrapper import nms
+  File "/home/oeasy/SSH-TensorFlow/tools/../lib/model/nms_wrapper.py", line 12, in <module>
+    from nms.gpu_nms import gpu_nms
+ModuleNotFoundError: No module named 'nms.gpu_nms'
+Command exited with non-zero status 1
+5.19user 1.40system 5:10.33elapsed 2%CPU (0avgtext+0avgdata 162412maxresident)k
+727008inputs+72outputs (2435major+80068minor)pagefaults 0swaps

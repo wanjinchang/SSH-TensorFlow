@@ -1,0 +1,102 @@
++ echo Logging output to experiments/logs/mobile_wider_face_train__mobile.txt.2018-12-29_10-55-58
+Logging output to experiments/logs/mobile_wider_face_train__mobile.txt.2018-12-29_10-55-58
++ set +x
++ '[' '!' -f output/mobile/wider_face_train/default/mobile_ssh_iter_300000.ckpt.index ']'
++ [[ ! -z '' ]]
++ CUDA_VISIBLE_DEVICES=0
++ time python ./tools/trainval_net.py --weight data/imagenet_weights/mobile.ckpt --imdb wider_face_train --imdbval wider_face_val --iters 300000 --cfg experiments/cfgs/mobile.yml --backbone mobile --set TRAIN.STEPSIZE '[120000]'
+/home/oeasy/anaconda3/lib/python3.6/importlib/_bootstrap.py:219: RuntimeWarning: compiletime version 3.5 of module 'tensorflow.python.framework.fast_tensor_util' does not match runtime version 3.6
+  return f(*args, **kwds)
+/home/oeasy/anaconda3/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Called with args:
+Namespace(backbone='mobile', cfg_file='experiments/cfgs/mobile.yml', imdb_name='wider_face_train', imdbval_name='wider_face_val', max_iters=300000, set_cfgs=['TRAIN.STEPSIZE', '[120000]'], tag=None, weight='data/imagenet_weights/mobile.ckpt')
+Using config:
+{'ANCHOR_RATIOS': [1],
+ 'ANCHOR_SCALES': {'M1': [1, 2], 'M2': [4, 8], 'M3': [16, 32]},
+ 'DATA_DIR': '/home/oeasy/SSH-TensorFlow/data',
+ 'EXP_DIR': 'mobile',
+ 'MATLAB': 'matlab',
+ 'MOBILENET': {'DEPTH_MULTIPLIER': 1.0,
+               'FIXED_LAYERS': 3,
+               'REGU_DEPTH': False,
+               'WEIGHT_DECAY': 4e-05},
+ 'MOBILENET_V2': {'DEPTH_MULTIPLIER': 1.0,
+                  'FIXED_LAYERS': 0,
+                  'MIN_DEPTH': 16,
+                  'REGU_DEPTH': False,
+                  'WEIGHT_DECAY': 4e-05},
+ 'PIXEL_MEANS': array([[[102.9801, 115.9465, 122.7717]]]),
+ 'POOLING_MODE': 'crop',
+ 'POOLING_SIZE': 7,
+ 'RESNET': {'FIXED_BLOCKS': 1, 'MAX_POOL': False},
+ 'RNG_SEED': 3,
+ 'ROOT_DIR': '/home/oeasy/SSH-TensorFlow',
+ 'RPN_CHANNELS': 512,
+ 'TEST': {'ANCHOR_MIN_SIZE': 4,
+          'BBOX_REG': True,
+          'HAS_RPN': True,
+          'MAX_SIZE': 1600,
+          'MODE': 'nms',
+          'NMS': 0.3,
+          'PROPOSAL_METHOD': 'gt',
+          'RPN_NMS_THRESH': 0.3,
+          'RPN_POST_NMS_TOP_N': 300,
+          'RPN_PRE_NMS_TOP_N': 1000,
+          'RPN_TOP_N': 5000,
+          'SCALES': [1200]},
+ 'TRAIN': {'ANCHOR_MIN_SIZE': 4,
+           'ASPECT_GROUPING': True,
+           'BATCH_SIZE': 256,
+           'BBOX_INSIDE_WEIGHTS': [1.0, 1.0, 1.0, 1.0],
+           'BBOX_NORMALIZE_MEANS': [0.0, 0.0, 0.0, 0.0],
+           'BBOX_NORMALIZE_STDS': [0.1, 0.1, 0.2, 0.2],
+           'BBOX_NORMALIZE_TARGETS': True,
+           'BBOX_NORMALIZE_TARGETS_PRECOMPUTED': True,
+           'BBOX_REG': True,
+           'BBOX_THRESH': 0.5,
+           'BG_THRESH_HI': 0.5,
+           'BG_THRESH_LO': 0.0,
+           'BIAS_DECAY': False,
+           'DISPLAY': 10,
+           'DOUBLE_BIAS': False,
+           'FG_FRACTION': 0.25,
+           'FG_THRESH': 0.5,
+           'FORCE_FG_FOR_EACH_GT': False,
+           'GAMMA': 0.1,
+           'HARD_POSITIVE_MINING': True,
+           'HAS_RPN': True,
+           'IMS_PER_BATCH': 1,
+           'LEARNING_RATE': 0.001,
+           'MAX_SIZE': 1600,
+           'MOMENTUM': 0.9,
+           'PROPOSAL_METHOD': 'gt',
+           'RPN_BATCHSIZE': 256,
+           'RPN_BBOX_INSIDE_WEIGHTS': [1.0, 1.0, 1.0, 1.0],
+           'RPN_CLOBBER_POSITIVES': False,
+           'RPN_FG_FRACTION': 0.5,
+           'RPN_NEGATIVE_OVERLAP': 0.3,
+           'RPN_NMS_THRESH': 0.3,
+           'RPN_POSITIVE_OVERLAP': 0.5,
+           'RPN_POSITIVE_WEIGHT': -1.0,
+           'RPN_POST_NMS_TOP_N': 300,
+           'RPN_PRE_NMS_TOP_N': 1000,
+           'SCALES': [1200],
+           'SNAPSHOT_ITERS': 10000,
+           'SNAPSHOT_KEPT': 3,
+           'SNAPSHOT_PREFIX': 'mobile_ssh',
+           'STEPSIZE': [120000],
+           'SUMMARY_INTERVAL': 180,
+           'TRUNCATED': False,
+           'USE_ALL_GT': True,
+           'USE_FLIPPED': True,
+           'USE_GT': False,
+           'WEIGHT_DECAY': 0.0001},
+ 'USE_E2E_TF': True,
+ 'USE_GPU_NMS': True}
+Loaded dataset `wider_face_train` for training
+Set proposal method: gt
+Appending horizontally-flipped training examples...
+wider_face_train gt roidb loaded from /home/oeasy/SSH-TensorFlow/data/cache/wider_face_train_gt_roidb.pkl
+done
+Preparing training data...

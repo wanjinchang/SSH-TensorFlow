@@ -1,0 +1,22 @@
++ echo Logging output to experiments/logs/mobile_wider_face_train__mobile.txt.2018-12-29_10-41-17
+Logging output to experiments/logs/mobile_wider_face_train__mobile.txt.2018-12-29_10-41-17
++ set +x
++ '[' '!' -f output/mobile/wider_face_train/default/mobile_ssh_iter_300000.ckpt.index ']'
++ [[ ! -z '' ]]
++ CUDA_VISIBLE_DEVICES=0
++ time python ./tools/trainval_net.py --weight data/imagenet_weights/mobile.ckpt --imdb wider_face_train --imdbval wider_face_val --iters 300000 --cfg experiments/cfgs/mobile.yml --net mobile --set TRAIN.STEPSIZE '[120000]'
+/home/oeasy/anaconda3/lib/python3.6/importlib/_bootstrap.py:219: RuntimeWarning: compiletime version 3.5 of module 'tensorflow.python.framework.fast_tensor_util' does not match runtime version 3.6
+  return f(*args, **kwds)
+/home/oeasy/anaconda3/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Traceback (most recent call last):
+  File "./tools/trainval_net.py", line 19, in <module>
+    from datasets.factory import get_imdb
+  File "/home/oeasy/SSH-TensorFlow/tools/../lib/datasets/factory.py", line 20, in <module>
+    from lib.datasets.wider_face import wider_face
+  File "/home/oeasy/SSH-TensorFlow/lib/datasets/wider_face.py", line 27, in <module>
+    from .voc_eval import voc_eval
+ModuleNotFoundError: No module named 'lib.datasets.voc_eval'
+Command exited with non-zero status 1
+3.47user 0.89system 1:12.68elapsed 6%CPU (0avgtext+0avgdata 197280maxresident)k
+380280inputs+48outputs (1166major+52403minor)pagefaults 0swaps

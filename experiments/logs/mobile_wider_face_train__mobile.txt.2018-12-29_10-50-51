@@ -1,0 +1,19 @@
++ echo Logging output to experiments/logs/mobile_wider_face_train__mobile.txt.2018-12-29_10-50-51
+Logging output to experiments/logs/mobile_wider_face_train__mobile.txt.2018-12-29_10-50-51
++ set +x
++ '[' '!' -f output/mobile/wider_face_train/default/mobile_ssh_iter_300000.ckpt.index ']'
++ [[ ! -z '' ]]
++ CUDA_VISIBLE_DEVICES=0
++ time python ./tools/trainval_net.py --weight data/imagenet_weights/mobile.ckpt --imdb wider_face_train --imdbval wider_face_val --iters 300000 --cfg experiments/cfgs/mobile.yml --net mobile --set TRAIN.STEPSIZE '[120000]'
+/home/oeasy/anaconda3/lib/python3.6/importlib/_bootstrap.py:219: RuntimeWarning: compiletime version 3.5 of module 'tensorflow.python.framework.fast_tensor_util' does not match runtime version 3.6
+  return f(*args, **kwds)
+/home/oeasy/anaconda3/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+usage: trainval_net.py [-h] [--cfg CFG_FILE] [--weight WEIGHT]
+                       [--imdb IMDB_NAME] [--imdbval IMDBVAL_NAME]
+                       [--iters MAX_ITERS] [--tag TAG] [--backbone BACKBONE]
+                       [--set ...]
+trainval_net.py: error: unrecognized arguments: --net mobile
+Command exited with non-zero status 2
+5.29user 1.18system 2:31.96elapsed 4%CPU (0avgtext+0avgdata 203904maxresident)k
+621072inputs+56outputs (1848major+80174minor)pagefaults 0swaps
