@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 
 # --------------------------------------------------------
-# Tensorflow Faster R-CNN
+# Tensorflow SSH
 # Licensed under The MIT License [see LICENSE for details]
-# Written by Xinlei Chen, based on code from Ross Girshick
+# Written by Jinchang WAN, based on code from Ross Girshick
 # --------------------------------------------------------
 
 """
