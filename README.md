@@ -120,7 +120,7 @@ data
 ```
 
 Or you can follow the instructions of py-faster-rcnn [here](https://github.com/rbgirshick/py-faster-rcnn#beyond-the-demo-installation-for-training-and-testing-models) to setup WIDER Face datasets. The steps involve downloading data and optionally creating soft links in the ``data/`` folder. 
-If you find it useful, the ``data/cache`` folder created on my side is also shared [here](https://drive.google.com/open?id=1L7QpZm5qVgGO8HtDvQbrFcfTIoGY4Jzh).
+If you find it is useful, the ``data/cache`` folder created on my side is also shared [here](https://drive.google.com/open?id=1L7QpZm5qVgGO8HtDvQbrFcfTIoGY4Jzh).
 
 ## Training
 
