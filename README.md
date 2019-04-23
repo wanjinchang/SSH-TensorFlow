@@ -42,6 +42,7 @@ When the input image's shortest and longest side is limited as 400x800, the infe
 | ResNet50 | ~68ms |
 | MobileNetV1 | ~23ms |
 | MobileNetV2 | ~21ms |
+
 **Note**: About the difference between random training and group training, please see details in the script ``lib/model/train_val.py``.
 
 ### Result
