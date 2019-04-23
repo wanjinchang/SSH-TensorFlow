@@ -23,16 +23,25 @@ This code is modified from [tf-faster-rcnn](https://github.com/endernewton/tf-fa
 
 SSH eval result without using an image pyramid between different backbones:
 
-| backbone |  easy | medium | hard | inference time(GTX 1060) | training method |
-|:-------:|:-----:|:-----:|:-----:|:-------:|:-------:|
-|  VGG16 | 0.908 | 0.885 | 0.746 | 56ms(400x600) | random training |
-|  VGG16 | 0.917 | 0.903 | 0.799 | 56ms(400x600) | group training |
-| ResNet50 | 0.902 | 0.880 | 0.689 | 68ms(400x600) | random training |
-| ResNet50 | 0.918 | 0.906 | 0.791 | 68ms(400x600) | group training |
-| MobileNetV1 | 0.897 | 0.874 | 0.720 | 23ms(400x600) | random training |
-| MobileNetV1 | 0.910 | 0.886 | 0.754 | 23ms(400x600) | group training |
-| MobileNetV2 | 0.865 | 0.820 | 0.576 | 21ms(400x600) | random training |
+| backbone |  easy | medium | hard | training method |
+|:-------:|:-----:|:-----:|:-----:|:-------:|
+| VGG16(origin paper) | 0.919 | 0.907 | 0.814 | -- |
+|  VGG16 | 0.908 | 0.885 | 0.746 | random training |
+|  VGG16 | 0.917 | 0.903 | 0.799 | group training |
+| ResNet50 | 0.902 | 0.880 | 0.689 | random training |
+| ResNet50 | 0.918 | 0.906 | 0.791 | group training |
+| MobileNetV1 | 0.897 | 0.874 | 0.720 | random training |
+| MobileNetV1 | 0.910 | 0.886 | 0.754 | group training |
+| MobileNetV2 | 0.865 | 0.820 | 0.576 | random training |
 
+When the input image's shortest and longest side is limited as 400x800, the inference times are as follows:
+
+| backbone | inference time(GTX 1060) |
+|:-------:|:-------:|
+|  VGG16 | ~56ms |
+| ResNet50 | ~68ms |
+| MobileNetV1 | ~23ms |
+| MobileNetV2 | ~21ms |
 **Note**: About the difference between random training and group training, please see details in the script ``lib/model/train_val.py``.
 
 ### Result
