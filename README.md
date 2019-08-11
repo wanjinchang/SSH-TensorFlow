@@ -229,7 +229,7 @@ MIT LICENSE
 - [ ] Fix some bugs in training MobileNetV2_SSH
 - [ ] Support multi-batch images training
 - [ ] Multi-GPUs training
-- [x] Add facial landmarks detection, please see [SSHA](https://github.com/wanjinchang/SSHA-TensorFlow) for details
+- [x] Added facial landmarks localization, please see [SSHA](https://github.com/wanjinchang/SSHA-TensorFlow) for details
 
 ### References
 1. SSH: Single Stage Headless Face Detector(https://arxiv.org/pdf/1708.03979.pdf). Mahyar Najibi, Pouya Samangouei, Rama Chellappa, Larry S. Davis.ICCV 2017.
